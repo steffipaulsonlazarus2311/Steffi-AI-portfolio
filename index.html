@@ -312,7 +312,7 @@ nav{
 .about-inner {
   display: grid;
   grid-template-columns: 300px 1.2fr; /* gives more space for the text column */
-  gap: 2rem; /* optional: adds space between photo and text */
+  gap: 3rem; /* optional: adds space between photo and text */
   align-items:start;
 }
 /*             .about-inner{
@@ -547,16 +547,16 @@ body.modal-open{overflow:hidden}
 
 /* reflection */
 .reflection-block {
-  max-width: 620px;        /* keeps the box within your main content width */
-  width: 100%;             /* fills container width */
-  padding: 1.6rem 1.8rem 3rem 1.8rem; /* extra bottom padding for rectangular look */
+  width: 100%;          /* fills the text column */
+  max-width: 620px;     /* keeps it from exceeding your desired width */
+  padding: 1.6rem 1.8rem;
   border-left: 1px solid var(--accent);
   background: var(--adim);
   border-radius: 0 var(--r) var(--r) 0;
   margin-top: 1.4rem;
-  box-sizing: border-box;  /* include padding in width/height */
+  box-sizing: border-box; /* ensures padding is included in width */
+  min-height: auto;      /* remove fixed height so it grows with content */
 }
-
 .reflection-block p {
   font-size: 1rem;
   font-style: italic;
