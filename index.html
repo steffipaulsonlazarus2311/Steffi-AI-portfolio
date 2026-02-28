@@ -567,6 +567,11 @@ body.modal-open{overflow:hidden}
 .prompt-iter-img{aspect-ratio:var(--prompt-ratio,16/9);background:var(--bg3);border-radius:var(--r);margin-bottom:.8rem;position:relative;
                  overflow:hidden;border:1px solid var(--border);}
 .project-panel.vertical-storyboard .prompt-iter-img{--prompt-ratio:9/16;}
+
+/* Project 2 — 4:5 storyboard + iterations */
+.project-panel.storyboard-45 .sb-thumb{--sb-ratio:4/5;}
+.project-panel.storyboard-45 .prompt-iter-img{--prompt-ratio:4/5;}
+
 .prompt-iter-img img{width:100%;height:100%;object-fit:contain;display:block;}
 }
 .prompt-iter-img span{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--bordm);user-select:none}
@@ -925,7 +930,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <!-- PROJECT 2 -->
-    <div id="p2" class="project-panel vertical-storyboard">
+    <div id="p2" class="project-panel storyboard-45">
       <div class="video-hero reel">
           <iframe
             src="https://www.youtube.com/embed/_gUAr51Dhg0"
