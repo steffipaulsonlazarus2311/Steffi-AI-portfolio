@@ -211,7 +211,9 @@ nav{
 }
 .work-card:hover{transform:translateY(-5px) scale(1.006);box-shadow:0 0 0 1px rgba(123,111,224,.32),var(--shmd);z-index:3}
 .work-card:hover::before{opacity:1}
-.card-thumb{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--bg3)}
+.card-thumb{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--bg3);}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  
 .card-thumb-placeholder{
   width:100%;height:100%;
   display:flex;align-items:flex-end;justify-content:flex-start;
@@ -478,6 +480,12 @@ body.modal-open{overflow:hidden}
 .project-panel.active{display:block}
 
 /* video hero */
+.video-hero.reel{
+  aspect-ratio:9/16;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+}
 .video-hero{
   position:relative;aspect-ratio:16/9;background:#050507;
   border-radius:var(--r);overflow:hidden;cursor:none;
@@ -523,11 +531,13 @@ body.modal-open{overflow:hidden}
   border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:1.4rem;
 }
 .sb-frame{background:var(--card);overflow:hidden}
-.sb-thumb{position:relative;aspect-ratio:16/9;background:var(--bg3);overflow:hidden}
+.sb-thumb{position:relative;aspect-ratio:16/9;background:var(--bg3);overflow:hidden;}
+.sb-hover-video{width:100%;height:100%;object-fit:cover;}
 .sb-still-ph{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   background:var(--bg3);transition:opacity .48s var(--ease);
 }
+.sb-still-ph img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
 .sb-still-ph svg{width:18px;height:18px;opacity:.14;color:var(--muted)}
 .sb-hover-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity .48s var(--ease)}
 .sb-frame:hover .sb-still-ph{opacity:0}
@@ -537,31 +547,30 @@ body.modal-open{overflow:hidden}
 /* prompt grid */
 .prompt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:1.4rem}
 .prompt-iter-label{display:block;margin-bottom:.65rem;font-size:.85rem;}
-.prompt-iter-img{
-  aspect-ratio:16/9;background:var(--bg3);border-radius:var(--r);margin-bottom:.8rem;
-  position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--border);
+.prompt-iter-img{aspect-ratio:16/9;background:var(--bg3);border-radius:var(--r);margin-bottom:.8rem;
+                 position:relative;overflow:hidden;border:1px solid var(--border);}
+.prompt-iter-img img{width:100%;height:100%;object-fit:contain;display:block;}
 }
 .prompt-iter-img span{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--bordm);user-select:none}
 .prompt-iter-text{font-size:.90rem;color:var(--muted);line-height:1.7}
 
 /* reflection */
-.reflection-block {
-  width: 100%;          /* fills the text column */
-  max-width: 620px;     /* keeps it from exceeding your desired width */
-  padding: 1.6rem 1.8rem;
-  border-left: 1px solid var(--accent);
-  background: var(--adim);
-  border-radius: 0 var(--r) var(--r) 0;
-  margin-top: 1.4rem;
-  box-sizing: border-box; /* ensures padding is included in width */
-  min-height: auto;      /* remove fixed height so it grows with content */
+.reflection-block{
+  width:100%;
+  max-width:900px;
+  padding:1.4rem 1.8rem;
+  border-left:1px solid var(--accent);
+  background:var(--adim);
+  border-radius:0 var(--r) var(--r) 0;
+  margin-top:1.4rem;
+  box-sizing:border-box;
 }
-.reflection-block p {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--muted);
-  line-height: 1.85;
+
+.reflection-block p{
+  font-size:1rem;
+  font-style:italic;
+  color:var(--muted);
+  line-height:1.75;
 }
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1100px){
@@ -637,6 +646,7 @@ body.modal-open{overflow:hidden}
          onclick="openProject('p1')" onkeydown="if(event.key==='Enter')openProject('p1')"
          aria-label="Open: Deloitte – Data Trust & AI Foundations">
       <div class="card-thumb">
+        <img src="deloitte_SC2.png">
         <div class="card-thumb-placeholder"><span class="card-index">01</span></div>
         <div class="card-accent-bar"></div>
       </div>
@@ -652,6 +662,7 @@ body.modal-open{overflow:hidden}
          onclick="openProject('p2')" onkeydown="if(event.key==='Enter')openProject('p2')"
          aria-label="Open: Bingo Protocol">
       <div class="card-thumb">
+        <img src="bingo_storyboard/SC3.jpg">
         <div class="card-thumb-placeholder"><span class="card-index">02</span></div>
         <div class="card-accent-bar"></div>
       </div>
@@ -667,6 +678,7 @@ body.modal-open{overflow:hidden}
          onclick="openProject('p3')" onkeydown="if(event.key==='Enter')openProject('p3')"
          aria-label="Open: Girl Rescue Haunted">
       <div class="card-thumb">
+        <img src="game_storyboard/SC8.jpg">
         <div class="card-thumb-placeholder"><span class="card-index">03</span></div>
         <div class="card-accent-bar"></div>
       </div>
@@ -682,6 +694,7 @@ body.modal-open{overflow:hidden}
          onclick="openProject('p4')" onkeydown="if(event.key==='Enter')openProject('p4')"
          aria-label="Open: The Quiet Signal">
       <div class="card-thumb">
+        <img src="hoopr_SC6.jpg">
         <div class="card-thumb-placeholder"><span class="card-index">04</span></div>
         <div class="card-accent-bar"></div>
       </div>
@@ -883,14 +896,13 @@ body.modal-open{overflow:hidden}
     </div>
 
     <!-- PROJECT 2 -->
-    <div id="p4" class="project-panel">
-      <div class="video-hero">
-          <iframe 
-            class="vh-video"
+    <div id="p2" class="project-panel">
+      <div class="video-hero reel">
+          <iframe
             src="https://www.youtube.com/embed/_gUAr51Dhg0"
-            title="Bingo Reel"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            width="100%"
+            height="100%"
+            style="border:0;width:100%;height:100%;"
             allowfullscreen>
           </iframe>
         </div>
@@ -936,6 +948,7 @@ body.modal-open{overflow:hidden}
           referrerpolicy="strict-origin-when-cross-origin" 
           allowfullscreen>
         </iframe>
+      </div>
       <h2 class="project-title">Girl Rescue Haunted</h2>
       <p class="project-brief">An AI-conceptualized dark fantasy game centered on rescuing a girl from a haunted world, where I designed the narrative, environment mood, and cinematic visuals through iterative prompt design, atmospheric lighting, and suspense-driven world building to create an immersive horror adventure experience.</p>
       <div class="sub-section">
@@ -967,13 +980,12 @@ body.modal-open{overflow:hidden}
 
     <!-- PROJECT 4 -->
     <div id="p4" class="project-panel">
-        <div class="video-hero">
+        <div class="video-hero reel">
           <iframe
-            class="vh-video"
             src="https://www.youtube.com/embed/X0A1Jys2NaM"
-            title="Gulabi HooprSmash"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            width="100%"
+            height="100%"
+            style="border:0;width:100%;height:100%;"
             allowfullscreen>
           </iframe>
         </div>
