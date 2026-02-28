@@ -540,13 +540,24 @@ body.modal-open{overflow:hidden}
 .prompt-iter-text{font-size:.90rem;color:var(--muted);line-height:1.7}
 
 /* reflection */
-.reflection-block{
-  max-width:620px;padding:1.6rem 1.8rem;
-  border-left:1px solid var(--accent);background:var(--adim);
-  border-radius:0 var(--r) var(--r) 0;margin-top:1.4rem;
+.reflection-block {
+  max-width: 620px;          /* keeps your current width limit */
+  width: 100%;               /* make it fill container */
+  min-height: 280px;         /* sets a minimum rectangular height */
+  padding: 1.6rem 1.8rem;
+  border-left: 1px solid var(--accent);
+  background: var(--adim);
+  border-radius: 0 var(--r) var(--r) 0;
+  margin-top: 1.4rem;
+  box-sizing: border-box;    /* includes padding in width/height */
 }
-.reflection-block p{font-size:1rem;font-style:italic;color:var(--muted);line-height:1.85}
 
+.reflection-block p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.85;
+}
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1100px){
   .work-grid,.storyboard-grid{grid-template-columns:repeat(2,1fr)}
