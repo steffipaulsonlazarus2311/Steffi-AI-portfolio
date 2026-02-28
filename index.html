@@ -619,14 +619,14 @@ body.modal-open{overflow:hidden}
 
     <div class="work-card" role="listitem" tabindex="0"
          onclick="openProject('p1')" onkeydown="if(event.key==='Enter')openProject('p1')"
-         aria-label="Open: Liminal Spaces">
+         aria-label="Open: Deloitte – Data Trust & AI Foundations">
       <div class="card-thumb">
         <div class="card-thumb-placeholder"><span class="card-index">01</span></div>
         <div class="card-accent-bar"></div>
       </div>
       <div class="card-body">
         <span class="accent-mono">Narrative · 2024</span>
-        <span class="card-title">Liminal Spaces</span>
+        <span class="card-title">Deloitte – Data Trust & AI Foundations</span>
         <p class="card-desc">An AI-generated meditation on transitional moments and the poetry of in-between.</p>
         <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
       </div>
@@ -816,11 +816,11 @@ body.modal-open{overflow:hidden}
     <!-- PROJECT 1 -->
     <div id="p1" class="project-panel">
       <div class="video-hero" onclick="handlePlay(this)">
-        <div class="vh-placeholder"><span class="vh-placeholder-text">Liminal</span></div>
+        <div class="vh-placeholder"><span class="vh-placeholder-text">Deloitte</span></div>
         <video class="vh-video" src="" muted playsinline loop preload="none"></video>
         <div class="vh-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       </div>
-      <h2 class="project-title">Liminal Spaces</h2>
+      <h2 class="project-title">Deloitte – Data Trust & AI Foundations</h2>
       <p class="project-brief">A cinematic exploration of transitional moments — airports at 3am, empty corridors, half-lit rooms. Each frame was generated from precise emotional cues, assembling a dreamlike narrative of belonging and absence.</p>
       <div class="sub-section">
         <div class="section-divider"><span class="mono">Visual Development</span></div>
@@ -839,13 +839,13 @@ body.modal-open{overflow:hidden}
         <div class="section-divider"><span class="mono">Prompt Evolution</span></div>
         <div class="prompt-grid">
           <div class="prompt-iter"><span class="accent-mono prompt-iter-label">Iteration 01</span><div class="prompt-iter-img"><span>I</span></div><p class="prompt-iter-text">"Empty airport corridor at 3am, fluorescent light, photorealistic." — Too literal. The space read as surveillance footage, not cinema.</p></div>
-          <div class="prompt-iter"><span class="accent-mono prompt-iter-label">Iteration 02</span><div class="prompt-iter-img"><span>II</span></div><p class="prompt-iter-text">"Liminal airport, warm haze, shallow depth of field, 35mm grain, melancholic." — Better atmosphere, but colour felt arbitrary and unanchored.</p></div>
+          <div class="prompt-iter"><span class="accent-mono prompt-iter-label">Iteration 02</span><div class="prompt-iter-img"><span>II</span></div><p class="prompt-iter-text">"Deloitte airport, warm haze, shallow depth of field, 35mm grain, melancholic." — Better atmosphere, but colour felt arbitrary and unanchored.</p></div>
           <div class="prompt-iter"><span class="accent-mono prompt-iter-label">Iteration 03</span><div class="prompt-iter-img"><span>III</span></div><p class="prompt-iter-text">"Deserted terminal, amber underlight, drift of fog at floor level, Tarkovsky-esque, golden hour memory." — Emotion leads; description follows.</p></div>
         </div>
       </div>
       <div class="sub-section">
         <div class="section-divider"><span class="mono">What I Learned</span></div>
-        <div class="reflection-block"><p>AI generation rewards emotional framing over descriptive precision. Once I began prompting with feeling states rather than visual facts, the outputs shifted dramatically toward coherence. Liminal Spaces taught me to write for the model's intuition, not its vocabulary.</p></div>
+        <div class="reflection-block"><p>AI generation rewards emotional framing over descriptive precision. Once I began prompting with feeling states rather than visual facts, the outputs shifted dramatically toward coherence. Deloitte – Data Trust & AI Foundations taught me to write for the model's intuition, not its vocabulary.</p></div>
       </div>
     </div>
 
@@ -1110,7 +1110,7 @@ const p = basePulse + Math.sin(n.phase) * .16;
 const modal = document.getElementById('project-modal');
 const mLabel = document.getElementById('modal-label');
 let activePanel = null;
-const LABELS = { p1:'01 / Liminal Spaces', p2:'02 / Chroma Protocol', p3:'03 / Hollow Atlas', p4:'04 / The Quiet Signal' };
+const LABELS = { p1:'01 / Deloitte – Data Trust & AI Foundations', p2:'02 / Chroma Protocol', p3:'03 / Hollow Atlas', p4:'04 / The Quiet Signal' };
 
 function openProject(id) {
   if (activePanel) activePanel.classList.remove('active');
