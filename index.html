@@ -212,7 +212,10 @@ nav{
 .work-card:hover{transform:translateY(-5px) scale(1.006);box-shadow:0 0 0 1px rgba(123,111,224,.32),var(--shmd);z-index:3}
 .work-card:hover::before{opacity:1}
 .card-thumb{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--bg3);}
-.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1);transition:transform .6s var(--ease);}
+
+/* image-only zoom */
+.work-card:hover .card-thumb img{transform:scale(1.10);}
   
 .card-thumb-placeholder{
   width:100%;height:100%;
@@ -342,18 +345,20 @@ nav{
   object-position:50% 20%;
   display:block;
 }
-
 .about-photo-label{
   position:absolute;
   bottom:1rem;
   left:1rem;
   font-family:'DM Mono',monospace;
-  font-size:.65rem;
+  font-size:.7rem;
   letter-spacing:.12em;
   text-transform:uppercase;
-  color:var(--dim);
+  color:#ffffff;
+  font-weight:500;
 }
-
+[data-theme="light"] .about-photo-label{
+  color:#ffffff;
+}
 .about-h{
   font-size:clamp(2.5rem,3vw,2.8rem);
   font-weight:300;
@@ -486,6 +491,16 @@ body.modal-open{overflow:hidden}
   margin-left:auto;
   margin-right:auto;
 }
+.video-hero iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.video-hero{
+  display:block;
+}
 .video-hero{
   position:relative;aspect-ratio:16/9;background:#050507;
   border-radius:var(--r);overflow:hidden;cursor:none;
@@ -530,8 +545,10 @@ body.modal-open{overflow:hidden}
   gap:1px;background:var(--border);
   border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:1.4rem;
 }
+/* vertical storyboard support */
+.project-panel.vertical-storyboard .sb-thumb{--sb-ratio:9/16;}
 .sb-frame{background:var(--card);overflow:hidden}
-.sb-thumb{position:relative;aspect-ratio:16/9;background:var(--bg3);overflow:hidden;}
+.sb-thumb{position:relative;aspect-ratio:var(--sb-ratio,16/9);background:var(--bg3);overflow:hidden;}
 .sb-hover-video{width:100%;height:100%;object-fit:cover;}
 .sb-still-ph{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
@@ -547,14 +564,26 @@ body.modal-open{overflow:hidden}
 /* prompt grid */
 .prompt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:1.4rem}
 .prompt-iter-label{display:block;margin-bottom:.65rem;font-size:.85rem;}
-.prompt-iter-img{aspect-ratio:16/9;background:var(--bg3);border-radius:var(--r);margin-bottom:.8rem;
-                 position:relative;overflow:hidden;border:1px solid var(--border);}
+.prompt-iter-img{aspect-ratio:var(--prompt-ratio,16/9);background:var(--bg3);border-radius:var(--r);margin-bottom:.8rem;position:relative;
+                 overflow:hidden;border:1px solid var(--border);}
+.project-panel.vertical-storyboard .prompt-iter-img{--prompt-ratio:9/16;}
 .prompt-iter-img img{width:100%;height:100%;object-fit:contain;display:block;}
 }
 .prompt-iter-img span{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--bordm);user-select:none}
 .prompt-iter-text{font-size:.90rem;color:var(--muted);line-height:1.7}
 
 /* reflection */
+.reflection-block{
+  width:100%;
+  max-width:980px;
+  padding:1.4rem 2rem;
+  border-left:1px solid var(--accent);
+  background:var(--adim);
+  border-radius:0 var(--r) var(--r) 0;
+  margin-top:1.4rem;
+  box-sizing:border-box;
+}
+/* reflection
 .reflection-block{
   width:100%;
   max-width:900px;
@@ -564,7 +593,7 @@ body.modal-open{overflow:hidden}
   border-radius:0 var(--r) var(--r) 0;
   margin-top:1.4rem;
   box-sizing:border-box;
-}
+} */
 
 .reflection-block p{
   font-size:1rem;
@@ -896,7 +925,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <!-- PROJECT 2 -->
-    <div id="p2" class="project-panel">
+    <div id="p2" class="project-panel vertical-storyboard">
       <div class="video-hero reel">
           <iframe
             src="https://www.youtube.com/embed/_gUAr51Dhg0"
@@ -941,7 +970,7 @@ body.modal-open{overflow:hidden}
         <iframe 
           width="560" 
           height="315" 
-          src="https://www.youtube.com/embed/RGt5UVtLMoE?si=nAk4oUJQUtJ8969P&amp;start=2" 
+          src="https://www.youtube.com/embed/RGt5UVtLMoE?si=7C_QAEDs8N-JQ280"
           title="Girl Rescue Haunted - Game Trailer" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -979,7 +1008,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <!-- PROJECT 4 -->
-    <div id="p4" class="project-panel">
+    <div id="p4" class="project-panel vertical-storyboard">
         <div class="video-hero reel">
           <iframe
             src="https://www.youtube.com/embed/X0A1Jys2NaM"
