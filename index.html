@@ -309,12 +309,18 @@ nav{
 }
 
 /* GRID ONLY — no padding, no max-width */
-.about-inner{
+.about-inner {
+  display: grid;
+  grid-template-columns: 300px 1.2fr; /* gives more space for the text column */
+  gap: 2rem; /* optional: adds space between photo and text */
+  align-items:start;
+}
+/*             .about-inner{
   display:grid;
   grid-template-columns:300px 1fr;
   gap:3rem;
   align-items:start;
-}
+}                  */
 
 .about-photo-wrap{
   width:100%;
@@ -541,23 +547,21 @@ body.modal-open{overflow:hidden}
 
 /* reflection */
 .reflection-block {
-  max-width: 620px;        /* keeps box within layout margins */
-  width: 100%;             /* fills the column width */
-  padding: 1.6rem 1.8rem;
+  max-width: 620px;        /* keeps the box within your main content width */
+  width: 100%;             /* fills container width */
+  padding: 1.6rem 1.8rem 3rem 1.8rem; /* extra bottom padding for rectangular look */
   border-left: 1px solid var(--accent);
   background: var(--adim);
   border-radius: 0 var(--r) var(--r) 0;
   margin-top: 1.4rem;
-  box-sizing: border-box;  /* include padding in width */
+  box-sizing: border-box;  /* include padding in width/height */
 }
 
-/* paragraph inside reflection */
 .reflection-block p {
   font-size: 1rem;
   font-style: italic;
   color: var(--muted);
   line-height: 1.85;
-  margin: 0;               /* remove extra margin that can cause odd spacing */
 }
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1100px){
