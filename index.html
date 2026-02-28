@@ -235,11 +235,16 @@ nav{
 @keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}   */
 
 /* ─── WORK ───────────────────────────────────────────────── */
-#work{max-width:1280px;margin:0 auto;padding:3rem 2.5rem 0}
+#work{max-width:1280px;margin:0 auto;padding:6rem 0 0;}
+.work-container{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 2.5rem;
+}
 .work-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
-  gap:10px;background:var(--border);
-  border:3px solid var(--border);border-radius:var(--r);overflow:hidden;
+  gap:18px;background:var(--border);
+  border:1px solid var(--border);border-radius:var(--r);overflow:hidden;
 }
 .work-card{
   background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -718,6 +723,7 @@ body.modal-open{overflow:hidden}
 
 <!-- WORK -->
 <section id="work" aria-label="Work">
+  <div class="work-container">
   <div class="section-divider reveal"><span class="mono">Work</span></div>
   <div class="work-grid reveal" role="list">
 
@@ -749,42 +755,42 @@ body.modal-open{overflow:hidden}
         <span class="accent-mono">Brand · 2025</span>
         <span class="card-title">Bingo - AD Reel</span>
         <p class="card-desc">A stylized brand exploration where colour and motion evolve as narrative elements, shaping a playful and dynamic advertising identity.</p>
-        <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
+          <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
+        </div>
+      </div>
+  
+      <div class="work-card" role="listitem" tabindex="0"
+           onclick="openProject('p3')" onkeydown="if(event.key==='Enter')openProject('p3')"
+           aria-label="Open: Girl Rescue Haunted">
+        <div class="card-thumb">
+          <img src="game_storyboard/SC8.jpg">
+          <div class="card-thumb-placeholder"><span class="card-index">03</span></div>
+          <div class="card-accent-bar"></div>
+        </div>
+        <div class="card-body">
+          <span class="accent-mono">Experimental · 2025</span>
+          <span class="card-title">Girl Rescue Haunted</span>
+          <p class="card-desc">An atmospheric AI short exploring fear, pursuit, and imagined worlds through iterative visual storytelling and creature-driven emotion.</p>
+          <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
+        </div>
+      </div>
+  
+      <div class="work-card" role="listitem" tabindex="0"
+           onclick="openProject('p4')" onkeydown="if(event.key==='Enter')openProject('p4')"
+           aria-label="Open: The Quiet Signal">
+        <div class="card-thumb">
+          <img src="hoopr_SC6.jpg">
+          <div class="card-thumb-placeholder"><span class="card-index">04</span></div>
+          <div class="card-accent-bar"></div>
+        </div>
+        <div class="card-body">
+          <span class="accent-mono">Music Visual · 2025</span>
+          <span class="card-title">Gulabi - HooprSmash</span>
+          <p class="card-desc">A music-led visual piece blending performance and mood to capture intimacy, rhythm, and cultural expression through cinematic AI imagery.</p>
+          <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
+        </div>
       </div>
     </div>
-
-    <div class="work-card" role="listitem" tabindex="0"
-         onclick="openProject('p3')" onkeydown="if(event.key==='Enter')openProject('p3')"
-         aria-label="Open: Girl Rescue Haunted">
-      <div class="card-thumb">
-        <img src="game_storyboard/SC8.jpg">
-        <div class="card-thumb-placeholder"><span class="card-index">03</span></div>
-        <div class="card-accent-bar"></div>
-      </div>
-      <div class="card-body">
-        <span class="accent-mono">Experimental · 2025</span>
-        <span class="card-title">Girl Rescue Haunted</span>
-        <p class="card-desc">An atmospheric AI short exploring fear, pursuit, and imagined worlds through iterative visual storytelling and creature-driven emotion.</p>
-        <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
-      </div>
-    </div>
-
-    <div class="work-card" role="listitem" tabindex="0"
-         onclick="openProject('p4')" onkeydown="if(event.key==='Enter')openProject('p4')"
-         aria-label="Open: The Quiet Signal">
-      <div class="card-thumb">
-        <img src="hoopr_SC6.jpg">
-        <div class="card-thumb-placeholder"><span class="card-index">04</span></div>
-        <div class="card-accent-bar"></div>
-      </div>
-      <div class="card-body">
-        <span class="accent-mono">Music Visual · 2025</span>
-        <span class="card-title">Gulabi - HooprSmash</span>
-        <p class="card-desc">A music-led visual piece blending performance and mood to capture intimacy, rhythm, and cultural expression through cinematic AI imagery.</p>
-        <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
-      </div>
-    </div>
-
   </div>
 </section>
 
