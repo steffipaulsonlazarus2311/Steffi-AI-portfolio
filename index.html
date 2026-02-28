@@ -745,7 +745,7 @@ body.modal-open{overflow:hidden}
 
     <div class="work-card" role="listitem" tabindex="0"
          onclick="openProject('p2')" onkeydown="if(event.key==='Enter')openProject('p2')"
-         aria-label="Open: Bingo Protocol">
+         aria-label="Open: Bingo - AD Reel">
       <div class="card-thumb">
         <img src="bingo_storyboard/SC3.jpg">
         <div class="card-thumb-placeholder"><span class="card-index">02</span></div>
@@ -761,7 +761,7 @@ body.modal-open{overflow:hidden}
   
       <div class="work-card" role="listitem" tabindex="0"
            onclick="openProject('p3')" onkeydown="if(event.key==='Enter')openProject('p3')"
-           aria-label="Open: Girl Rescue Haunted">
+           aria-label="Open: Girl Rescue Haunted - Game">
         <div class="card-thumb">
           <img src="game_storyboard/SC8.jpg">
           <div class="card-thumb-placeholder"><span class="card-index">03</span></div>
@@ -769,7 +769,7 @@ body.modal-open{overflow:hidden}
         </div>
         <div class="card-body">
           <span class="accent-mono">Experimental · 2025</span>
-          <span class="card-title">Girl Rescue Haunted</span>
+          <span class="card-title">Girl Rescue Haunted - Game</span>
           <p class="card-desc">An atmospheric AI short exploring fear, pursuit, and imagined worlds through iterative visual storytelling and creature-driven emotion.</p>
           <span class="card-cta" aria-hidden="true">View Case Study <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h6M5.5 2.5 8 5l-2.5 2.5"/></svg></span>
         </div>
@@ -777,7 +777,7 @@ body.modal-open{overflow:hidden}
   
       <div class="work-card" role="listitem" tabindex="0"
            onclick="openProject('p4')" onkeydown="if(event.key==='Enter')openProject('p4')"
-           aria-label="Open: The Quiet Signal">
+           aria-label="Open: Gulabi - HooprSmash">
         <div class="card-thumb">
           <img src="hoopr_SC6.jpg">
           <div class="card-thumb-placeholder"><span class="card-index">04</span></div>
@@ -969,13 +969,10 @@ body.modal-open{overflow:hidden}
       <div class="sub-section">
         <div class="section-divider"><span class="mono">What I Learned</span></div>
       <div class="reflection-block">
-          <p>Studying the script deeply helped me understand the importance of <strong>data trust and governance</strong> in AI systems and how it impacts real-world decision-making.</p>
-          <p>Breaking the script into visuals and generating <strong>storyboards for each scene</strong> taught me structured planning and visual storytelling for technical content.</p>
-          <p>Working closely with the client highlighted the value of <strong>attention to detail</strong>, especially in maintaining consistent color themes and visual language across the project.</p>
-          <p>Experimenting with color choices, like proposing a <strong>golden theme for harmony</strong> instead of strict red/green coding, improved the visual coherence and gained client approval.</p>
-          <p>Iterating based on client feedback reinforced the importance of <strong>flexibility, communication, and collaboration</strong> in delivering polished, approved outputs.</p>
+          <p>Studying the script deeply helped me understand the importance of <strong>data trust and governance</strong> in AI systems and how it impacts real-world decision-making.Breaking the script into visuals and generating <strong>storyboards for each scene</strong> 
+            taught me structured planning and visual storytelling for technical content.Working closely with the client highlighted the value of <strong>attention to detail</strong>, especially in maintaining consistent color themes and visual language across the project.</p>
+          <p>Experimenting with color choices, like proposing a <strong>golden theme for harmony</strong> instead of strict red/green coding, improved the visual coherence and gained client approval.Iterating based on client feedback reinforced the importance of <strong>flexibility, communication, and collaboration</strong> in delivering polished, approved outputs.</p>
           <p>Overall, I learned how to <strong>translate complex AI concepts into clear, engaging visuals</strong> while balancing creativity and technical accuracy.</p>
-          <p>AI generation rewards emotional framing over descriptive precision. Once I began prompting with feeling states rather than visual facts, the outputs shifted dramatically toward coherence. Deloitte – Data Trust & AI Foundations taught me to write for the model's intuition, not its vocabulary.</p>
         </div>
       </div>
     </div>
@@ -1256,7 +1253,7 @@ const p = basePulse + Math.sin(n.phase) * .16;
 const modal = document.getElementById('project-modal');
 const mLabel = document.getElementById('modal-label');
 let activePanel = null;
-const LABELS = { p1:'01 / Deloitte – Data Trust & AI Foundations', p2:'02 / Bingo - AD Reel', p3:'03 / Game - Girl Rescue Haunted', p4:'04 / HooprSmash' };
+const LABELS = { p1:'01 / Deloitte – Data Trust & AI Foundations', p2:'02 / Bingo - AD Reel', p3:'03 / Girl Rescue Haunted - Game', p4:'04 / Gulabi - HooprSmash' };
 
 function openProject(id) {
   if (activePanel) activePanel.classList.remove('active');
