@@ -115,7 +115,7 @@ body::after{
 .section-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
 .reveal.in{opacity:1;transform:none}
-nav,#hero,#work,.yt-row,#process,#tools,#about,#contact,footer{position:relative;z-index:1}
+nav,#hero,#work,.yt-row,#process,#about,#contact,footer{position:relative;z-index:1}
 
 /* ─── NAV ────────────────────────────────────────────────── */
 nav{
@@ -340,13 +340,23 @@ nav{
 .tl-label{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--text);margin-bottom:.4rem;line-height:1.2}
 .tl-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
 
-  /* ─── TOOLS SECTION ───────────────────────────────────────── */
-
+/* ─── TOOLS SECTION ───────────────────────────────────────── */
 #tools{
-  max-width:1000px;
+  width:100%;
+  margin:120px 0;
+  padding:0;
+}
+  
+/* #tools{
+  max-width:1280px;
   margin:120px auto;
   padding:0 24px;
   box-sizing:border-box;
+}     */
+
+/* spacing under title */
+#tools .section-divider{
+  margin-bottom:35px;
 }
 
 #tools .about-tags{
@@ -354,54 +364,7 @@ nav{
   flex-wrap:wrap;
   gap:10px;
 }
-/* TOOLS 
 
-.tools-process{
-  margin-top:60px;
-  text-align:center;
-}
-
-.tools-process-title{
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  opacity:0.6;
-  margin-bottom:20px;
-}
-
-.tools-tags{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.tool-tag{
-  font-size:12px;
-  letter-spacing:1px;
-  padding:8px 14px;
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:4px;
-  color:#d7d7ff;
-  background:rgba(255,255,255,0.02);
-  transition:all 0.3s ease;
-}
-
-.tool-tag:hover{
-  border-color:#8b7dff;
-  color:#ffffff;
-}
-
-@media (max-width: 900px){
-  .about-inner{
-    grid-template-columns:0.9fr 1.1fr;
-    gap:2rem;
-  }
-
-  .about-photo-wrap{
-    max-width:100%;
-  }
-}         */
 /* ─── ABOUT ──────────────────────────────────────────────── */
 #about{
   border-top:1px solid var(--border);
@@ -703,13 +666,13 @@ body.modal-open{overflow:hidden}
   .about-inner{grid-template-columns:1fr;gap:2rem}
   .about-photo-wrap{width:160px}
   .prompt-grid{grid-template-columns:1fr}
-  .tools-tags{justify-content:center;
+  .tools-tags{justify-content:center};
   }
 }
 @media(max-width:720px){
   nav{padding:.9rem 1.2rem}
   .nav-center{display:none}
-  #work,#process,#tools,.about-inner,.contact-inner,.modal-content{padding-left:1.2rem;padding-right:1.2rem}
+  #work,#process,.about-inner,.contact-inner,.modal-content{padding-left:1.2rem;padding-right:1.2rem}
   .yt-row{padding-left:1.2rem;padding-right:1.2rem}
   .work-grid,.storyboard-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:.4rem;text-align:center;padding:1.2rem}
@@ -729,7 +692,6 @@ body.modal-open{overflow:hidden}
   <ul class="nav-center" role="list">
     <li><a href="#work"    onclick="smoothTo(event,'work')">Work</a></li>
     <li><a href="#process" onclick="smoothTo(event,'process')">Process</a></li>
-    <li><a href="#tools" onclick="smoothTo(event,'tools')">Tools</a></li>
     <li><a href="#about"   onclick="smoothTo(event,'about')">About</a></li>
     <li><a href="#contact" onclick="smoothTo(event,'contact')">Contact</a></li>
   </ul>
@@ -915,26 +877,14 @@ body.modal-open{overflow:hidden}
   <div class="section-divider reveal">
     <span class="mono">AI PRODUCTION STACK</span>
   </div>
-
-  <div class="tools-inner reveal">
-    <div class="tools-tags">
-      <span class="tool-tag">ChatGPT — Prompting</span>
-      <span class="tool-tag">Kling AI</span>
-      <span class="tool-tag">Higgsfield</span>
-      <span class="tool-tag">HeyGen</span>
-      <span class="tool-tag">Seedream</span>
-      <span class="tool-tag">Nano Banana</span>
-      <span class="tool-tag">OpenArt</span>
-    </div>
-
     <div class="about-tags reveal">
-          <span class="tag">AI Film Direction</span>
-          <span class="tag">Visual Systems</span>
-          <span class="tag">Prompt Cinematography</span>
-          <span class="tag">Brand Films</span>
-          <span class="tag">Narrative</span>
-          <span class="tag">Experimental</span>
-          <span class="tag">Concept-First</span>
+          <span class="tag">ChatGPT — Prompting</span>
+          <span class="tag">Kling AI</span>
+          <span class="tag">Higgsfield</span>
+          <span class="tag">HeyGen</span>
+          <span class="tag">Seedream</span>
+          <span class="tag">Nano Banana</span>
+          <span class="tag">OpenArt</span>
         </div>
   </div>
 </section>
