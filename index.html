@@ -205,34 +205,7 @@ nav{
 .hero-eyebrow{
   opacity:0;animation:heroUp .85s .12s forwards;
   margin-bottom:.35rem;
-}  
-/* name — large, editorial, cinematic weight 
-.hero-name{
-  font-size:clamp(8rem,10.5vw,10.5rem);
-  font-weight:300;
-  letter-spacing:-.045em;
-  line-height:.86;
-  color:var(--text);
-  margin-bottom:.5rem;
-  opacity:0;animation:heroUp .85s .25s forwards;
-  position:relative;z-index:1;
 }
-.hero-name em{font-style:italic;color:var(--accent)} */
-/* role — mono accent tag 
-.hero-role{
-  font-family:'DM Mono',monospace;font-size:.70rem;
-  letter-spacing:.26em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:.75rem;
-  opacity:0;animation:heroUp .85s .38s forwards; */
-}
-/* subtitle — refined, not oversized 
-.hero-subtitle{
-  font-size:.90rem;color:var(--muted);font-weight:300;
-  max-width:320px;line-height:1.68;letter-spacing:.01em;
-  opacity:0;animation:heroUp .85s .50s forwards;
-  position:relative;z-index:1;
-}
-@keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}   */
 
 /* ─── WORK ───────────────────────────────────────────────── */
 #work{max-width:1280px;margin:0 auto;padding:6rem 0 0;}
@@ -340,54 +313,6 @@ nav{
 .tl-label{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--text);margin-bottom:.4rem;line-height:1.2}
 .tl-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
 
-/* TOOLS 
-
-.tools-process{
-  margin-top:60px;
-  text-align:center;
-}
-
-.tools-process-title{
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  opacity:0.6;
-  margin-bottom:20px;
-}
-
-.tools-tags{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.tool-tag{
-  font-size:12px;
-  letter-spacing:1px;
-  padding:8px 14px;
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:4px;
-  color:#d7d7ff;
-  background:rgba(255,255,255,0.02);
-  transition:all 0.3s ease;
-}
-
-.tool-tag:hover{
-  border-color:#8b7dff;
-  color:#ffffff;
-}
-
-@media (max-width: 900px){
-  .about-inner{
-    grid-template-columns:0.9fr 1.1fr;
-    gap:2rem;
-  }
-
-  .about-photo-wrap{
-    max-width:100%;
-  }
-} */
 /* ─── ABOUT ──────────────────────────────────────────────── */
 #about{
   border-top:1px solid var(--border);
@@ -407,12 +332,6 @@ nav{
   gap: 3rem; /* optional: adds space between photo and text */
   align-items:start;
 }
-/*             .about-inner{
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:3rem;
-  align-items:start;
-}                  */
 
 .about-photo-wrap{
   width:100%;
@@ -675,17 +594,6 @@ body.modal-open{overflow:hidden}
   margin-top:1.4rem;
   box-sizing:border-box;
 }
-/* reflection
-.reflection-block{
-  width:100%;
-  max-width:900px;
-  padding:1.4rem 1.8rem;
-  border-left:1px solid var(--accent);
-  background:var(--adim);
-  border-radius:0 var(--r) var(--r) 0;
-  margin-top:1.4rem;
-  box-sizing:border-box;
-} */
 
 .reflection-block p{
   font-size:1rem;
@@ -694,7 +602,7 @@ body.modal-open{overflow:hidden}
   line-height:1.75;
 }
 
-/* ─── TOOLS STACK ─────────────────────────────────────────── */
+/* ─── TOOLS SECTION ───────────────────────────────────────── */
 
 #tools{
   max-width:1100px;
@@ -702,22 +610,16 @@ body.modal-open{overflow:hidden}
   padding:0 24px;
 }
 
-.tools-stack{
-  margin-top:40px;
-}
-
+/* spacing under the title */
 #tools .section-divider{
-  margin-bottom:35px;
+  margin-bottom:32px;
 }
 
-/* force tools section to stay visible */
-#tools .section-divider,
-#tools .tools-stack,
-#tools .about-tags,
-#tools .tag{
-  opacity:1 !important;
-  transform:none !important;
-  visibility:visible !important;
+/* use same tag system as about section */
+#tools .about-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
@@ -744,12 +646,6 @@ body.modal-open{overflow:hidden}
   footer{flex-direction:column;gap:.4rem;text-align:center;padding:1.2rem}
   .modal-topbar{padding:.9rem 1.2rem}
 }
-
-/* FORCE TOOLS VISIBLE */
-#tools *{
-  opacity:1 !important;
-  transform:none !important;
-} 
 
 </style>
 </head>
@@ -947,9 +843,11 @@ body.modal-open{overflow:hidden}
 
 <!-- TOOLS -->
 <section id="tools" aria-label="Tools used">
+
   <div class="section-divider">
     <span class="mono">AI PRODUCTION STACK</span>
   </div>
+
   <div class="about-tags">
     <span class="tag">ChatGPT — Prompting</span>
     <span class="tag">Kling AI</span>
@@ -959,6 +857,7 @@ body.modal-open{overflow:hidden}
     <span class="tag">Nano Banana</span>
     <span class="tag">OpenArt</span>
   </div>
+
 </section>
 
 <!-- ABOUT -->
